@@ -8,7 +8,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.37);
     > input {
       margin-right: auto;
-      @include inputStyles(100%, 1rem 0);
+      @include inputStyle(100%, 1rem 0);
     }
     > svg {
       font-size: 1.2rem;
