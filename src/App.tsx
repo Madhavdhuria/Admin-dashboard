@@ -24,8 +24,8 @@ const App = () => {
 
           {/* {charts} */}
           <Route path="/admin/chart/bar" element={<BarCharts />} />
-          <Route path="/admin/chart/pie" element={<LineCharts />} />
-          <Route path="/admin/chart/line" element={<PieCharts />} />
+          <Route path="/admin/chart/line" element={<LineCharts />} />
+          <Route path="/admin/chart/pie" element={<PieCharts />} />
           {/* {apps} */}
 
           {/* {Management} */}

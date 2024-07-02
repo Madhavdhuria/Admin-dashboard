@@ -11,7 +11,7 @@ import {
   ArcElement,
 } from "chart.js";
 
-import { Bar, Doughnut } from "react-chartjs-2";
+import { Bar, Doughnut,Pie } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -123,7 +123,7 @@ export const DoughnutChart = ({
       },
     ],
   };
-
+  
   const DoughnutChartOptions: ChartOptions<"doughnut"> = {
     responsive: true,
     plugins: {
@@ -137,6 +137,42 @@ export const DoughnutChart = ({
     },
     cutout,
   };
-
+  
   return <Doughnut data={DoughnutChartData} options={DoughnutChartOptions} />;
+};
+
+interface PieChartProps {
+  data: number[];
+  labels: string[];
+  backgroundColor: string[];
+  offset?: number[];
+}
+export const PieChart = ({
+  data,
+  labels,
+  backgroundColor,
+  offset,
+}: PieChartProps) => {
+  const PieChartData: ChartData<"pie", number[], string> = {
+    labels,
+    datasets: [
+      {
+        data,
+        backgroundColor,
+        borderWidth: 0,
+        offset,
+      },
+    ],
+  };
+
+  const PieChartOptions: ChartOptions<"pie"> = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  };
+
+  return <Pie data={PieChartData} options={PieChartOptions} />;
 };
