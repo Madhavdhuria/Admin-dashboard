@@ -1,5 +1,5 @@
 import AdminSidebar from "../../components/AdminSidebar";
-import { Barchart } from "../../components/Chart";
+import { BarChart } from "../../components/Chart";
 
 const months = [
   "January",
@@ -23,7 +23,7 @@ const BarCharts = () => {
       <main className="chart-container">
         <h1>Bar Charts</h1>
         <section>
-          <Barchart
+          <BarChart
             data_1={[200, 444, 343, 556, 778, 455, 990]}
             data_2={[300, 144, 433, 655, 237, 755, 190]}
             title_1="Products"
@@ -34,7 +34,7 @@ const BarCharts = () => {
           <h2>Top Selling Products & Top Customers</h2>
         </section>
         <section>
-          <Barchart
+          <BarChart
             horizontal={true}
             data_1={[
               200, 444, 343, 556, 778, 455, 990, 444, 122, 334, 890, 909,
