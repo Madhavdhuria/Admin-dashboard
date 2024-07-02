@@ -4,7 +4,7 @@ import { FaRegBell } from "react-icons/fa";
 import { HiTrendingUp, HiTrendingDown } from "react-icons/hi";
 import logo from "../assets/logo.png";
 import data from "../assets/data.json";
-import { Barchart, DoughnutChart } from "../components/Chart";
+import {BarChart, DoughnutChart } from "../components/Chart";
 import { BiMaleFemale } from "react-icons/bi";
 import DashBoardTable from "../components/DashBoardTable";
 const Dashboard = () => {
@@ -50,7 +50,7 @@ const Dashboard = () => {
         <section className="graphContainer">
           <div className="revenueChart">
             <h2>Revenue & Transactions</h2>
-            <Barchart
+            <BarChart
               data_1={[300, 144, 433, 655, 237, 755, 190]}
               data_2={[200, 444, 343, 556, 778, 455, 990]}
               title_1="Revenue"
